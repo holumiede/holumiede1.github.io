@@ -60,8 +60,14 @@
 	margin-right:150px
 	border: 0px solid #fff;
     box-shadow: 0 0 0 5px grey;
+	
 		  }
 		
+	.wpda{
+	     width:900px;
+	     height:400px;
+		 float:center;
+		 }
 	
 	</style>
 </head>
@@ -70,8 +76,8 @@
 			<strong>
 				<ul id="all">
 					<li><span id="NM">Osideinde Oluwadara</span> <small  id="ca">Coding Advocate</small></li><br>
-					<li id="AM"><a href="#">About Me</a></li>
-					<li><a href="#">Articles</a></li>
+					<li id="AM"><a href="#me">About Me</a></li>
+					<li><a href="#Articles">Articles</a></li>
 					<li><a href="#">Open Source</a></li>
 					<li><a href="#">Socials</a></li>
 				</ul>
@@ -92,6 +98,47 @@
 about some<br>strange holes he discovered in the wood floor while my parents were selling the house. Needless to say, <br>at the time he wasn't <mark>thrilled</mark> at how stunning creative i had been in circumventing their moratorium on<br> the internet, however in retrospect i now realize drilling those holes in the floor was one of the best things<br> i ever did as it was in that i fell in love with computers.</p>
 <p>Currently <mark>i help the internet faster.</mark> On my free-time i help motivate others to learn to code through<br> my own experiences.
 I get stoked on creative people on creative people and life altering ideas.</p>
+	</article>
+	<article id="me">
+	<h3> ABOUT ME</h3>
+	My name is <mark>Osideinde Oluwadara</mark> an undergraduate from the <mark>Federal University of Agriculture Abeokuta</mark>. I am a level 3 coder with <mark>intermediate</mark> skill in programmming.<br>
+	My main love is actually <mark>Pen tensting</mark> but sisnce the <mark>Nigerian Educational system</mark> doesnt allow for that i had to find another hobbie fast.
+	Presently i am mixed in alot of computer science skills which is probably going to serve as a good knowledge in the nearest future
+	My hoobies generally include Pen testing, Exploring the net and other interesting stuffs the net has to offer.
+	</article>
+	<article id="Articles">
+	<h3> ARTICLES </h3>
+	<h4><mark>How to Disable WPAD in Windows</mark></h4>
+	<img class="wpda" src="http://img.wonderhowto.com/img/82/48/63605140546143/0/disable-wpad-your-pc-so-your-https-traffic-wont-be-vulnerable-latest-ssl-attack.1280x600.jpg"/>
+	<br>This attack can be carried out on <mark>Linux, Mac, or Windows systems,</mark> 
+	but primarily the latter since it is the only one that is enabled by default with <mark>Internet Explorer</mark>.<br> 
+	WPAD is not <mark>automatically enabled</mark> in <mark>Mac OS X or Linux, nor on Safari, Chrome, or Firefox browsers,</mark> 
+	so you shouldn't have to do anything on your end to protect<br> yourself unless you use <mark>Microsoft Windows.</mark>
+
+To disable WPAD in Windows, you'll need to make an easy registry edit, as StackExchange user laktak points out:<br>
+                            <h4><MARK>STEPS TO DISABLE WPAD IN Windows</MARK><h4>
+<mark>1)</mark>Click the Start button, and in the search field, type in "regedit", then select "regedit.exe" from the list of results.<br>
+<mark>2)</mark>Navigate through the tree to HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Wpad.<br>
+<mark>3)</mark>Once you have the "Wpad" folder selected, right click in the right pane, and click on "New -> DWORD (32-Bit Value)".<br>
+<mark>4)</mark>Name this new value "WpadOverride".<br>
+<mark>5)</mark>Double click the new "WpadOverride" value to edit it.<br>
+<mark>6)</mark>In the "Value data" field, replace the "0" with a "1", then click "OK".<br>
+<mark>7)</mark>Reboot the computer.<br>
+	</article>
+	<article id="Source">
+	<h3>OPEN SOURCE</h3>
+	Open source refers to a program or software in which the source code (the form of the program when a programmer writes a program in a particular 
+	programming language) is available to the general public for use and/or modification from its original design free of charge.<br>
+	<mark>Here is a list of what I feel to be the best or most notable open source applications:</mark>
+	<h3><mark><pre>
+	*<a href="https://www.ubuntu.com/">Ubuntu: This is another OS just like windows, IOS, etc. But it deals mainly with command line</a>
+	*<a href="https://pidgin.im/">Pigdin: This is an IRC for secure chats if youre saying somethuing illegal (just kidding)</a>
+	*<a href="www.7-zip.org/download.html">7zip: I guess we're all familiar woth winrar. Well i would say this is better than winrar in some ways</a>
+	*<a href="https://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox: Well if you don't about this yet then you shouldn't be reading this</a>
+	*<a href="https://www.openoffice.org/">OpenOffice.org: OpenOffice is the leading open-source office software suite for word processing, spreadsheets, presentations, graphics and more. </a>
+	*<a href="https://www.mozilla.org/en-US/thunderbird/">Mozilla Thunderbird:  is a free, open source, cross-platform email, news, RSS, and chat client developed by the <mark>Mozilla Foundation</mark></a>
+	*<a href="www.videolan.org/vlc/index.html">VLC Media Player: This is probably the most downloaded software in <mark>Nigerian Universities</mark></a>
+	</pre></h3></mark>
 	</article>
 </body>
 </html>
