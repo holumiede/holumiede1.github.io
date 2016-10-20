@@ -1,173 +1,98 @@
-* {margin: 0; padding: 0;}
-
-body {
-	/*Fancy Full page BG*/
-	background:  center center fixed;
-	background-size: cover;
-	font-family: arial, verdana, tahoma;
-}
-
-#lightbox {
-	margin: 10px auto;
-	width: 520px; 
-	border-bottom: 1px solid #ccc;
-}
-#lightbox h1 {
-	text-transform: uppercase;
-	text-align: center;
-	padding: 10px 0;
-	margin: 20px 0;
-	color: white;
-	font-size: 24px;
-	background:;
-	border-left: 2px solid rgba(255, 255, 255, 0.65);
-	border-right: 2px solid rgba(255, 255, 255, 0.65);
-}
-#lightbox tr {
-	overflow: hidden;
-}
-/*Image styles*/
-#lightbox tr td {
-	float: left;
-	padding: 10px;
-	background: #fff;
-	margin: 0 20px 20px 0;
-	list-style-type: none;
-	position: relative;
-	cursor: pointer;
-}
-/*No right margin for images in the 2nd column*/
-#lightbox tr td:nth-child(even) {
-	margin-right: 0;
-}
-#lightbox tr td img {
-	display: block;
-}
-
-/*Image titles*/
-#lightbox .image_title {
-	width: 250px; height: 175px;
-	background: rgba(0, 0, 0, 0.5);
-	position: absolute;
-	top: 0; left: 0;
-	display: table;
-	/*Hover effect - default state*/
-	opacity: 0;
-	transition: all 0.5s;
-}
-#lightbox .title {
-	color: #fff;
-	background: rgba(0, 0, 0, 0.5);
-	text-transform: uppercase;
-	font-size: 14px;
-	text-align: center;
-	/*Vertical center align*/
-	display: table-cell;
-	vertical-align: middle;
-	/*Hover effect - default state*/
-	transform: scale(0.2);
-	transition: all 0.25s;
-}
-/*Zoom icon over each title using iconfont and pseudo elements*/
-#lightbox .title::before {
-	content: 'L';
-	font-family: websymbols;
-	font-size: 24px;
-	color: #fff;
-	opacity: 0.5;
-	display: block;
-	line-height: 36px;
-}
-/*Hover states*/
-#lightbox tr td:hover {
-	box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.75);
-}
-#lightbox tr td:hover .image_title {
-	opacity: 1;
-}
-#lightbox tr td:hover .title {
-	transform: scale(1);
-}
-
-/*Lets change the iconfont to websymbols since entypo has some issues with rendering on windows*/
-/*@font-face {
-	font-family: websymbols;
-	src: url("http://thecodeplayer.com/uploads/fonts/websymbols.eot");
-	src: url('http://thecodeplayer.com/uploads/fonts/websymbols.eot?#iefix') format('embedded-opentype'),
-     url('http://thecodeplayer.com/uploads/fonts/websymbols.woff') format('woff'),
-     url('http://thecodeplayer.com/uploads/fonts/websymbols.ttf') format('truetype'),
-	 url('http://thecodeplayer.com/uploads/fonts/websymbols.svg#WebSymbolsRegular') format('svg');*/
-}
-
-
-
-/*Lightbox element style*/
-.lb_backdrop {
-	background: rgba(0, 0, 0, 0.9);
-	position: fixed;
-	top: 0; left: 0; right: 0; bottom: 0;
-}
-/*The canvas contains the larger image*/
-.lb_canvas {
-	background: white;
-	width: 50px; height: 50px;
-	position: fixed;
-	top: 0; left: 0; /*Will be centered later by Jquery*/
-	box-shadow: 0 0 20px 5px black;
-	padding: 10px;
-}
-/*A separate class for loading GIF, for easy Jquery handling*/
-.lb_canvas.loading {
-	background: white url("http://thecodeplayer.com/uploads/media/loading.gif") center center no-repeat;
-}
-/*Lightbox Controls*/
-.lb_controls {
-	width: 400px; 
+#m1, #m2, #m3, #m4, #m5, #s1, #s2, #s3, #s4{
+  	                                   width: 320px;
+									   position: static;
+  	                                   height: 300px;
+									   z-index: -11;
+									   border: 5px solid #ccc;
+    float: left;
+    margin: 15px;
+    -webkit-transition: margin 0.5s ease-out;
+    -moz-transition: margin 0.5s ease-out;
+    -o-transition: margin 0.5s ease-out;
+									   overflow: hidden;
+									   width: 730px;
+									   color: transparent;
+	line-height: 0px;
+	color: transparent;
+	line-height: 0px;
 	
-	background: rgba(0, 0, 0, 0.75);
-	position: fixed;
-	bottom: 10px;
-	color: white;
-	/*To horizontally center it*/
-	left: 0; right: 0; margin: 0 auto; 
+                                      }
+.trans{
+	color: transparent;
+	line-height: 0px;
 }
-.lb_controls span {
-	line-height: 400px;
-	height: 400px;
-}
-.lb_controls span.inactive {
-	opacity: 0.25;
-}
-.lb_previous, .lb_next {
-	position: absolute;
-	top: 0;
-	padding: 5px 12px;
-	font-family: websymbols;
-	font-size: 14px;
-	background: black;
-	cursor: pointer;
-}
-.lb_previous {
-	left: 0;
-	border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
-.lb_next {
-	right: 0;
-	border-left: 1px solid rgba(255, 255, 255, 0.1);
-}
-.lb_title {
-	text-align: center;
-	display: block;
-	font-size: 14px;
+#m1:hover, #m2:hover, #m3:hover, #m4:hover, #m5:hover, #s1:hover, #s2:hover, #s3:hover, #s4:hover{
+  z-index: 1;
+                    opacity: 0.4;
+					margin-top: 4px;
+                    transition: opacity .3s ease-out;
+					line-height: 133px;
+	color: #575858;
+                    }
+					
+					
+					
+		#m1, #m2, #m3, #m4, #s1, #s2, #s3, #s4 img{
+	float: left;
+		margin: 0 15px;}
+					
+#gallery-thumb{
+	height: 133px;
+	line-height: 0px;
+	color: transparent;
+	font-size: 50px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	   font-weight: 300;
 	text-transform: uppercase;
-	padding: 5px 0;
-	font-weight: bold;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+}	
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+
+#nepa{
+	
+  	  margin: 0 auto;
+     }
+
+.check{
+	
+    margin: 0 auto;
+    }
+
+td{
+	
+  padding: 15px;
 }
-img {width:230px;
-	height:150px;}
 
-
-
+.fa {
+	
+    display: inline-block;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+#trans:hover {
+    width: 300px;
+    height: 300px;
+    
+}
+#trans {
+    
+   
+}
 
 
 
@@ -249,7 +174,8 @@ img {width:230px;
 				margin-left:00px;
 			}
 	input{
-			width: 105px;
+		text-align:center;
+			width: 130px;
 			padding: 20px;
 			cursor: pointer;
 			font-weight: bold;
